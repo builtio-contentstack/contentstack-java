@@ -97,8 +97,8 @@ public class Config {
      *
      *                <br><br><b>Example :</b><br>
      *                <pre class="prettyprint">
-     *                                                                  config.setVersion("v3");
-     *                                                             </pre>
+     *                                                                                 config.setVersion("v3");
+     *                                                                            </pre>
      */
     private void setVersion(String version) {
         if (version != null && !version.isEmpty()) {

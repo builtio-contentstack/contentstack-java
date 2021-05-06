@@ -26,8 +26,8 @@ public class Contentstack {
      * @throws Exception throws an exception
      *                   <br>
      *                   <b> Example :</b><br> <pre class="prettyprint">
-     *                                                                                               Stack stack = Contentstack.stack("blt5d4sample2633b", "blt6d0240b5sample254090d", "stag");
-     *                                                                                               </pre>
+     *                                                                                                                                                     Stack stack = Contentstack.stack("blt5d4sample2633b", "blt6d0240b5sample254090d", "stag");
+     *                                                                                                                                                     </pre>
      */
     public static Stack stack(String stackApiKey, String accessToken, String environment) throws Exception {
 
@@ -92,7 +92,10 @@ public class Contentstack {
         Stack stack = new Stack(stackApiKey.trim());
         stack.setHeader("api_key", stackApiKey);
         stack.setHeader("access_token", accessToken);
-        stack.setHeader("branch", config.getBranch());
+        // check null before setting header
+        if (config.getBranch() != null) {
+            stack.setHeader("branch", config.getBranch());
+        }
         stack.setConfig(config);
         return stack;
     }
