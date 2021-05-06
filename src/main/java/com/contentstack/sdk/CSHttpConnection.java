@@ -233,6 +233,9 @@ public class CSHttpConnection implements IURLRequestHTTP{
         if (this.headers.containsKey("environment")){
             conn.setRequestProperty("environment", headers.get("environment").toString());
         }
+        if (this.headers.containsKey("branch")){
+            conn.setRequestProperty("branch", headers.get("branch").toString());
+        }
         conn.setRequestProperty("X-User-Agent", defaultUserAgent()+"/"+ CSAppConstants.SDK_VERSION);
         conn.setRequestProperty("Content-Type", "application/json");
         int responseCode = conn.getResponseCode();

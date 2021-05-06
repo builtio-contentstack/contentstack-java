@@ -771,22 +771,22 @@ public class QueryTestCase {
         });
     }
 
-    @Test
-    public void test_43_entry_include_embedded_items() {
-        final Query query = stack.contentType("categories").query();
-        query.includeEmbeddedItems().find(new QueryResultsCallBack() {
-            @Override
-            public void onCompletion(ResponseType responseType, QueryResult queryresult, Error error) {
-                if (error == null) {
-                    List<Entry> arryResult = queryresult.getResultObjects();
-                    for (Entry entry : arryResult) {
-                        boolean _embedded_items = entry.toJSON().has("_embedded_items");
-                        //TestCase.assertTrue(_embedded_items);
-                    }
-                }
-                TestCase.assertTrue(query.urlQueries.has("include_embedded_items[]"));
-            }
-        });
-    }
+//    @Test
+//    public void test_43_entry_include_embedded_items() {
+//        final Query query = stack.contentType("categories").query();
+//        query.includeEmbeddedItems().find(new QueryResultsCallBack() {
+//            @Override
+//            public void onCompletion(ResponseType responseType, QueryResult queryresult, Error error) {
+//                if (error == null) {
+//                    List<Entry> arryResult = queryresult.getResultObjects();
+//                    for (Entry entry : arryResult) {
+//                        boolean _embedded_items = entry.toJSON().has("_embedded_items");
+//                        //TestCase.assertTrue(_embedded_items);
+//                    }
+//                }
+//                TestCase.assertTrue(query.urlQueries.has("include_embedded_items[]"));
+//            }
+//        });
+//    }
 
 }
