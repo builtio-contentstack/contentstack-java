@@ -321,9 +321,9 @@ public class Stack {
      *                     The sync token fetches only the content that was added after your last sync,
      *                     and the details of the content that was deleted or updated.
      *                     <br><br><b>Example :</b><br>  <pre class="prettyprint">
-     *                         //dummy sync_token = "blt28937206743728463";
-     *                         stack.syncToken(sync_token, new SyncResultCallBack() ){ }
-     *                         </pre>
+     *                                             //dummy sync_token = "blt28937206743728463";
+     *                                             stack.syncToken(sync_token, new SyncResultCallBack() ){ }
+     *                                             </pre>
      */
     public void syncToken(String sync_token, SyncResultCallBack syncCallBack) {
 
@@ -349,9 +349,9 @@ public class Stack {
      *                     with entries published after a specific date. To do this,
      *                     use syncWithDate and specify the start date as its value.
      *                     <br><br><b>Example :</b><br> <pre class="prettyprint">
-     *                         // dummy date final Date start_date = sdf.parse("2018-10-07");
-     *                         stack.syncFromDate(start_date, new SyncResultCallBack()) { }
-     *                         </pre>
+     *                                             // dummy date final Date start_date = sdf.parse("2018-10-07");
+     *                                             stack.syncFromDate(start_date, new SyncResultCallBack()) { }
+     *                                             </pre>
      */
     public void syncFromDate(Date from_date, SyncResultCallBack syncCallBack) {
         start_from_date = convertUTCToISO(from_date);
@@ -386,9 +386,9 @@ public class Stack {
      *                     However, if you do this, the subsequent syncs will only include the
      *                     entries of the specified content_type.
      *                     <br><br><b>Example :</b><br> <pre class="prettyprint">
-     *                         // dummy content_type like "session"
-     *                         stack.syncContentType(String content_type, new SyncResultCallBack()){  }
-     *                         </pre>
+     *                                             // dummy content_type like "session"
+     *                                             stack.syncContentType(String content_type, new SyncResultCallBack()){  }
+     *                                             </pre>
      */
     public void syncContentType(String content_type, SyncResultCallBack syncCallBack) {
 
@@ -416,9 +416,9 @@ public class Stack {
      *                     However, if you do this, the subsequent syncs will only include
      *                     the entries of the specified locales.
      *                     <br><br><b>Example :</b><br>  <pre class="prettyprint">
-     *                         // dummy language- Language.ENGLISH_UNITED_STATES
-     *                         stackInstance.syncLocale(Language.ENGLISH_UNITED_STATES,
-     *                         new SyncResultCallBack() ) { } </pre>
+     *                                             // dummy language- Language.ENGLISH_UNITED_STATES
+     *                                             stackInstance.syncLocale(Language.ENGLISH_UNITED_STATES,
+     *                                             new SyncResultCallBack() ) { } </pre>
      */
     public void syncLocale(Language language, SyncResultCallBack syncCallBack) {
         this.localeCode = getLanguageCode(language);
@@ -465,8 +465,8 @@ public class Stack {
      *                     entry_deleted,  content_type_deleted. If you do not specify any value,
      *                     it will bring all published entries and published assets.
      *                     <br><br><b>Example :</b><br> <pre class="prettyprint">
-     *                         stackInstance.syncPublishType(Stack.PublishType.entry_published,
-     *                         new SyncResultCallBack()) { }  </pre>
+     *                                             stackInstance.syncPublishType(Stack.PublishType.entry_published,
+     *                                             new SyncResultCallBack()) { }  </pre>
      */
     public void syncPublishType(PublishType type, SyncResultCallBack syncCallBack) {
         this.publishType = type;
@@ -497,8 +497,8 @@ public class Stack {
      *                     subsequent syncs will only include the entries of the
      *                     specified parameters  <br><br><b>Example :</b><br>
      *                     <pre class="prettyprint">
-     *                         stackInstance.sync(String contentType, Date from_date, Language language, PublishType type,
-     *                         SyncResultCallBack syncCallBack) { } </pre>
+     *                                             stackInstance.sync(String contentType, Date from_date, Language language, PublishType type,
+     *                                             SyncResultCallBack syncCallBack) { } </pre>
      */
     public void sync(String contentType, Date from_date, Language language, PublishType type, SyncResultCallBack syncCallBack) {
         start_from_date = convertUTCToISO(from_date);

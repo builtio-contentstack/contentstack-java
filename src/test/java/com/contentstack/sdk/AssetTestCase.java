@@ -26,10 +26,10 @@ public class AssetTestCase {
     public static void oneTimeSetUp() throws Exception {
         logger.setLevel(Level.FINE);
         Dotenv dotenv = Dotenv.load();
-        String DEFAULT_API_KEY = dotenv.get("API_KEY");
-        String DEFAULT_DELIVERY_TOKEN = dotenv.get("DELIVERY_TOKEN");
-        String DEFAULT_ENV = dotenv.get("ENVIRONMENT");
-        DEFAULT_HOST = dotenv.get("HOST");
+        String DEFAULT_API_KEY = dotenv.get("BRANCH_API_KEY");
+        String DEFAULT_DELIVERY_TOKEN = dotenv.get("BRANCH_DELIVERY_TOKEN");
+        String DEFAULT_ENV = dotenv.get("BRANCH_ENVIRONMENT");
+        DEFAULT_HOST = dotenv.get("BRANCH_HOST");
         Config config = new Config();
         config.setHost(DEFAULT_HOST);
         assert DEFAULT_API_KEY != null;

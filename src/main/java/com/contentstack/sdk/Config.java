@@ -97,8 +97,8 @@ public class Config {
      *
      *                <br><br><b>Example :</b><br>
      *                <pre class="prettyprint">
-     *                                                                                 config.setVersion("v3");
-     *                                                                            </pre>
+     *                config.setVersion("v3");
+     *                </pre>
      */
     private void setVersion(String version) {
         if (version != null && !version.isEmpty()) {
@@ -109,7 +109,11 @@ public class Config {
     /**
      * Get environment.
      *
-     * @return param environment string <br><br><b>Example :</b><br> <pre class="prettyprint">  String environment = config.getEnvironment(); </pre>
+     * @return param environment string
+     * <br><br><b>Example :</b><br>
+     * <pre class="prettyprint">
+     *     String environment = config.getEnvironment();
+     * </pre>
      */
     public String getEnvironment() {
         return environment;
@@ -118,7 +122,11 @@ public class Config {
     /**
      * set environment.
      *
-     * @param environment uid/name                    <br><br><b>Example :</b><br>                    <pre class="prettyprint">                                        config.setEnvironment("stag", false);                                       </pre>
+     * @param environment uid/name
+     *                    <br><br><b>Example :</b><br>
+     *                    <pre class="prettyprint">
+     *                    config.setEnvironment("stag", false);
+     *                    </pre>
      */
     protected void setEnvironment(String environment) {
         if (environment != null && !environment.isEmpty()) {
